@@ -1,5 +1,5 @@
 models/*
-data/*
+data/processed/*
 logs/*
 .idea/*
 .ipynb/*
