@@ -95,7 +95,7 @@ os.makedirs(TB_DIR)
 tensorboard = TensorBoard(log_dir=TB_DIR)
 
 # early stopping and checkpoint
-estopping = EarlyStopping(monitor='val_acc', patience=1000)
+estopping = EarlyStopping(monitor='val_acc', patience=10)
 checkpoint = ModelCheckpoint(filepath=MODELPATH, save_best_only=True)
 
 # model-------------------------
@@ -125,4 +125,4 @@ try:
                      callbacks=[checkpoint, estopping, tensorboard])
 
 except KeyboardInterrupt:    
-    print("training stopped")
+    pass
